@@ -1,234 +1,240 @@
-# TutorHub - Accessible Academic Tutoring Platform
+# TutorHub - Plataforma de Tutorías Académicas Accesible
 
-A comprehensive web application for managing academic tutoring sessions with a strong focus on accessibility and inclusive design.
+Una aplicación web completa para la gestión de tutorías académicas con un fuerte enfoque en accesibilidad y diseño inclusivo.
 
-## 🌟 Features
+## 🌟 Características
 
-### Core Functionality
-- **Complete Authentication System** - Secure user registration, login, and profile management
-- **Role-Based Access** - Separate interfaces for students, tutors, and administrators
-- **Session Management** - Schedule, manage, and track tutoring sessions
-- **Advanced Search** - Find tutors by subject, availability, and ratings
-- **Real-time Notifications** - Stay updated on session changes and reminders
-- **Feedback System** - Rate and review tutoring sessions
+### Funcionalidades Principales
+- **Sistema de Autenticación Completo** - Registro seguro de usuarios, inicio de sesión y gestión de perfiles
+- **Acceso Basado en Roles** - Interfaces separadas para estudiantes, tutores y administradores
+- **Gestión de Sesiones** - Programa, administra y da seguimiento a las tutorías
+- **Búsqueda Avanzada** - Encuentra tutores por materia, disponibilidad y calificaciones
+- **Notificaciones en Tiempo Real** - Mantente actualizado sobre cambios en las sesiones y recordatorios
+- **Sistema de Retroalimentación** - Califica y comenta las sesiones de tutoría
 
-### Accessibility Features
-- **WCAG 2.1 AA Compliant** - Meets international accessibility standards
-- **Screen Reader Support** - Full compatibility with assistive technologies
-- **Keyboard Navigation** - Complete keyboard accessibility for all features
-- **High Contrast Mode** - Enhanced visibility for users with visual impairments
-- **Adjustable Font Sizes** - Customizable text sizing for better readability
-- **Color-Blind Support** - Multiple color vision accessibility options
-- **Reduced Motion** - Respects user preferences for motion sensitivity
-- **Focus Management** - Clear focus indicators and logical tab order
+### Características de Accesibilidad
+- **Cumple con WCAG 2.1 Nivel AA** - Cumple con los estándares internacionales de accesibilidad
+- **Compatibilidad con Lector de Pantalla** - Compatibilidad total con tecnologías de asistencia
+- **Navegación por Teclado** - Accesibilidad completa mediante teclado para todas las funciones
+- **Modo Alto Contraste** - Mejor visibilidad para usuarios con discapacidad visual
+- **Tamaños de Fuente Ajustables** - Personalización del tamaño del texto para mejor legibilidad
+- **Soporte para Daltonismo** - Múltiples opciones de accesibilidad para visión de colores
+- **Movimiento Reducido** - Respeta las preferencias de los usuarios sensibles al movimiento
+- **Gestión del Foco** - Indicadores de enfoque claros y orden lógico de tabulación
 
-## 🚀 Getting Started
+## 🚀 Comenzando
 
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
-- Supabase account
+### Requisitos Previos
+- Node.js 18 o superior
+- npm o yarn
+- Una cuenta de Supabase
 
-### Installation
+### Instalación
 
-1. **Clone the repository**
+1. **Clona el repositorio**
    \`\`\`bash
-   git clone https://github.com/your-username/tutoring-management-system.git
-   cd tutoring-management-system
+   git clone https://github.com/your-username/sistema-tutorias.git
+   cd sistema-tutorias
    \`\`\`
 
-2. **Install dependencies**
+2. **Instala las dependencias**
    \`\`\`bash
    npm install
    \`\`\`
 
-3. **Set up environment variables**
+3. **Configura las variables de entorno**
    \`\`\`bash
    cp .env.example .env.local
    \`\`\`
    
-   Fill in your Supabase credentials:
+   Completa con tus credenciales de Supabase:
    \`\`\`env
-   NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   NEXT_PUBLIC_SUPABASE_URL=tu_url_de_proyecto_supabase
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_clave_anonima_supabase
    \`\`\`
 
-4. **Set up the database**
+4. **Configura la base de datos**
    
-   Run the SQL scripts in your Supabase SQL editor:
+   Ejecuta los scripts SQL en el editor de SQL de Supabase:
    \`\`\`bash
-   # Run scripts/01-initial-schema.sql first
-   # Then run scripts/02-seed-data.sql
+   # Primero ejecuta scripts/01-esquema-inicial.sql
+   # Luego ejecuta scripts/02-datos-iniciales.sql
    \`\`\`
 
-5. **Start the development server**
+5. **Inicia el servidor de desarrollo**
    \`\`\`bash
    npm run dev
    \`\`\`
 
-6. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+6. **Abre tu navegador**
+   Navega a [http://localhost:3000](http://localhost:3000)
 
-## 🏗️ Architecture
+## 🏗️ Arquitectura
 
-### Tech Stack
-- **Frontend**: Next.js 14 with App Router, React 18, TypeScript
-- **Backend**: Supabase (PostgreSQL, Auth, Storage, Realtime)
-- **Styling**: Tailwind CSS with custom accessibility enhancements
-- **UI Components**: Radix UI primitives with custom accessible wrappers
-- **State Management**: React Context API
+### Tecnologías Utilizadas
+- **Frontend**: Next.js 14 con App Router, React 18, TypeScript
+- **Backend**: Supabase (PostgreSQL, Autenticación, Almacenamiento, Tiempo real)
+- **Estilos**: Tailwind CSS con mejoras personalizadas de accesibilidad
+- **Componentes UI**: Primitivas de Radix UI con envoltorios accesibles personalizados
+- **Gestión de Estado**: React Context API
 
-### Project Structure
+### Estructura del Proyecto
 \`\`\`
-├── app/                    # Next.js App Router pages
+├── app/                    # Páginas de Next.js App Router
 ├── components/            
-│   ├── forms/             # Accessible form components
-│   ├── layout/            # Layout components (Header, Footer, etc.)
-│   └── ui/                # Reusable UI components
-├── contexts/              # React Context providers
-├── lib/                   # Utility functions and configurations
-├── scripts/               # Database setup and migration scripts
-└── public/                # Static assets
+│   ├── forms/             # Componentes de formulario accesibles
+│   ├── layout/            # Componentes de diseño (Encabezado, Pie de página, etc.)
+│   └── ui/                # Componentes UI reutilizables
+├── contexts/              # Proveedores de contexto de React
+├── lib/                   # Funciones de utilidad y configuraciones
+├── scripts/               # Scripts de configuración y migración de base de datos
+└── public/                # Archivos estáticos
 \`\`\`
 
-## 🎯 Accessibility Implementation
+## 🎯 Implementación de Accesibilidad
 
-### Key Accessibility Features
+### Características Clave de Accesibilidad
 
-1. **Semantic HTML Structure**
-   - Proper heading hierarchy (h1-h6)
-   - Landmark regions (main, nav, aside, footer)
-   - Form labels and descriptions
+1. **Estructura HTML Semántica**
+   - Jerarquía de encabezados adecuada (h1-h6)
+   - Regiones de puntos de referencia (main, nav, aside, footer)
+   - Etiquetas ARIA para mejorar la navegación con lectores de pantalla
+   - Textos alternativos para imágenes y elementos no textuales
+   - Controles de formulario correctamente etiquetados
+   - Etiquetas y descripciones de formularios
 
-2. **ARIA Implementation**
-   - ARIA labels for complex interactions
-   - Live regions for dynamic content updates
-   - Proper roles and states
+2. **Implementación de ARIA**
+   - Etiquetas ARIA para interacciones complejas
+   - Regiones dinámicas para actualizaciones de contenido en tiempo real
+   - Roles y estados adecuados
 
-3. **Keyboard Navigation**
-   - Tab order management
-   - Skip links for main content
-   - Keyboard shortcuts for common actions
+3. **Navegación por Teclado**
+   - Gestión del orden de tabulación
+   - Enlaces de salto al contenido principal
+   - Atajos de teclado para acciones comunes
 
-4. **Visual Accessibility**
-   - High contrast color schemes
-   - Scalable font sizes
-   - Color-blind friendly palettes
-   - Focus indicators
+4. **Accesibilidad Visual**
+   - Esquemas de color de alto contraste
+   - Tamaños de fuente escalables
+   - Paletas de colores para daltónicos
+   - Indicadores de foco visibles
 
-5. **Screen Reader Support**
-   - Descriptive alt text for images
-   - Screen reader only content where needed
-   - Proper form field associations
+5. **Soporte para Lectores de Pantalla**
+   - Texto alternativo descriptivo para imágenes
+   - Contenido exclusivo para lectores de pantalla cuando es necesario
+   - Asociaciones correctas de campos de formulario
 
-### Testing Accessibility
+### Pruebas de Accesibilidad
 
 \`\`\`bash
-# Install accessibility testing tools
+# Instalar herramientas de prueba de accesibilidad
 npm install -D @axe-core/react eslint-plugin-jsx-a11y
 
-# Run accessibility linting
+# Ejecutar verificación de accesibilidad
 npm run lint
 
-# Manual testing checklist:
-# - Navigate using only keyboard
-# - Test with screen reader (NVDA, JAWS, VoiceOver)
-# - Verify color contrast ratios
-# - Test with different zoom levels
+# Lista de verificación para pruebas manuales:
+# - Navegar usando solo el teclado
+# - Probar con lector de pantalla (NVDA, JAWS, VoiceOver)
+# - Verificar proporciones de contraste de color
+# - Probar con diferentes niveles de zoom
 \`\`\`
 
-## 🔧 Configuration
+## 🔧 Configuración
 
-### Supabase Setup
+### Configuración de Supabase
 
-1. **Create a new Supabase project**
-2. **Run the database migrations** (see scripts folder)
-3. **Configure Row Level Security policies**
-4. **Set up authentication providers** (optional)
+1. **Crea un nuevo proyecto en Supabase**
+2. **Ejecuta las migraciones de base de datos** (ver carpeta scripts)
+3. **Configura las políticas de seguridad a nivel de fila**
+4. **Configura proveedores de autenticación** (opcional)
 
-### Environment Variables
+### Variables de Entorno
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `NEXT_PUBLIC_SUPABASE_URL` | Your Supabase project URL | Yes |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anonymous key | Yes |
-| `SUPABASE_SERVICE_ROLE_KEY` | Service role key (for admin functions) | No |
+| Variable | Descripción | Requerido |
+|----------|-------------|-----------|
+| `NEXT_PUBLIC_SUPABASE_URL` | URL de tu proyecto Supabase | Sí |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Clave anónima de Supabase | Sí |
+| `SUPABASE_SERVICE_ROLE_KEY` | Clave de rol de servicio (para funciones de administrador) | No |
 
-## 📱 Responsive Design
+## 📱 Diseño Responsivo
 
-The application is fully responsive and works across:
-- **Desktop** (1024px+)
-- **Tablet** (768px - 1023px)  
-- **Mobile** (320px - 767px)
+La aplicación es completamente adaptable y funciona en:
+- **Escritorio** (1024px o más)
+- **Tabletas** (768px - 1023px)
+- **Móviles** (hasta 767px)
+- Se adapta automáticamente a diferentes tamaños de pantalla
+- Mantiene la usabilidad en todos los dispositivos
+- **Móviles** (320px - 767px)
 
-## 🧪 Testing
+## 🧪 Pruebas
 
 \`\`\`bash
-# Run type checking
+# Verificación de tipos
 npm run type-check
 
-# Run linting
+# Análisis de código
 npm run lint
 
-# Build for production
+# Construir para producción
 npm run build
 \`\`\`
 
-## 🚀 Deployment
+## 🚀 Despliegue
 
-### Deploy to Vercel
+### Desplegar en Vercel
 
-1. **Connect your repository to Vercel**
-2. **Add environment variables** in Vercel dashboard
-3. **Deploy** - Vercel will automatically build and deploy
+1. **Conecta tu repositorio a Vercel**
+2. **Añade las variables de entorno** en el panel de control de Vercel
+3. **Despliega** - Vercel construirá y desplegará automáticamente
 
-### Deploy to Other Platforms
+### Desplegar en Otras Plataformas
 
-The application can be deployed to any platform that supports Next.js:
+La aplicación puede desplegarse en cualquier plataforma que soporte Next.js:
 - Netlify
 - Railway
 - DigitalOcean App Platform
 - AWS Amplify
 
-## 🤝 Contributing
+## 🤝 Contribuciones
 
-We welcome contributions that improve accessibility and functionality!
+¡Apreciamos las contribuciones que mejoren la accesibilidad y funcionalidad!
 
-### Development Guidelines
+### Pautas de Desarrollo
 
-1. **Follow accessibility best practices**
-2. **Test with keyboard navigation**
-3. **Verify screen reader compatibility**
-4. **Maintain WCAG 2.1 AA compliance**
-5. **Write semantic HTML**
-6. **Include proper ARIA attributes**
+1. **Sigue las mejores prácticas de accesibilidad**
+2. **Prueba la navegación por teclado**
+3. **Verifica la compatibilidad con lectores de pantalla**
+4. **Mantén el cumplimiento con WCAG 2.1 Nivel AA**
+5. **Escribe HTML semántico**
+6. **Incluye atributos ARIA apropiados**
 
-### Pull Request Process
+### Proceso de Pull Request
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test accessibility thoroughly
-5. Submit a pull request
+1. Haz un fork del repositorio
+2. Crea una rama para tu característica
+3. Realiza tus cambios
+4. Prueba la accesibilidad minuciosamente
+5. Envía una solicitud de extracción
 
-## 📄 License
+## 📄 Licencia
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Este proyecto está bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
 
-## 🆘 Support
+## 🆘 Soporte
 
-- **Documentation**: Check this README and inline code comments
-- **Issues**: Report bugs and feature requests via GitHub Issues
-- **Accessibility**: For accessibility-related questions, please include details about your assistive technology
+- **Documentación**: Revisa este README y los comentarios en el código
+- **Problemas**: Reporta errores y solicitudes de características a través de GitHub Issues
+- **Accesibilidad**: Para preguntas relacionadas con accesibilidad, incluye detalles sobre tu tecnología de asistencia
 
-## 🙏 Acknowledgments
+## 🙏 Agradecimientos
 
-- **Supabase** for the excellent backend-as-a-service platform
-- **Radix UI** for accessible component primitives
-- **Tailwind CSS** for the utility-first CSS framework
-- **Next.js** team for the amazing React framework
-- **Web Accessibility Initiative (WAI)** for WCAG guidelines
+- **Supabase** por su excelente plataforma backend como servicio
+- **Radix UI** por sus primitivos de componentes accesibles
+- **Tailwind CSS** por su enfoque de utilidades primero para CSS
+- **Equipo de Next.js** por el increíble framework React
+- **Iniciativa de Accesibilidad Web (WAI)** por las pautas WCAG
 
 ---
 
-Built with ❤️ and accessibility in mind.
+Construido con ❤️ y accesibilidad en mente.
